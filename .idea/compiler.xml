@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Spring_03_aspectj" />
+        <module name="Spring_02_anno" />
+        <module name="Spring_04_MyBatis" />
+        <module name="Spring_01_First" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Spring-01-first" target="1.5" />
+      <module name="Spring_01_First" target="1.7" />
+      <module name="Spring_02_anno" target="1.8" />
+      <module name="Spring_03_aspectj" target="1.8" />
+      <module name="Spring_04_aspectj _around" target="8" />
+      <module name="Spring_04_MyBatis" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

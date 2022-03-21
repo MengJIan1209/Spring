@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    声明对象
+        id:自定义对象名称：唯一值
+        class：类的全限定名称，spring通过反射机制创建对象。不能是借口
+
+        spring根据id,class创建对象，吧对象放入到spring的一个map对象
+        map.put(id，对象)
+-->
+<!--    <bean id="someService" class="com.meng.spring.service.impl.SomeServiceImpl"/>-->
+<!--    <bean id="someService1" class="com.meng.spring.service.impl.SomeServiceImpl"/>-->
+
+<!--  创建非自定义对象  -->
+    <bean id="myDate" class="java.util.Date"/>
+
+<!--
+    引用类型自动注入：spring根据byName，byType规则给引用类型赋值
+    1.byName:(按名称注入)： java类中引用类型的属性名称和spring容器中bean的id名称一样
+                           且数据类型一样的，这样的bean能赋值给引用类型
+
+      语法：
+           <bean id = "xxx" class = "yy" autoware = "byName">
+                简单类型赋值
+           </bean>
+
+-->
+
+    <!-- 使用byName自动注入   -->
+    <bean id="student" class="com.meng.spring.ba04.Student" autowire="byName">
+        <property name="name" value="王五"/>
+        <property name="age" value="25"/>
+    </bean>
+
+<!--声明School类-->
+    <bean id="school" class="com.meng.spring.ba04.School">
+        <property name="name" value="清华大学"/>
+        <property name="address" value="北京市海淀区"/>
+    </bean>
+
+
+</beans>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    声明数据源DataSource-->
+    <bean id="myDataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+        <property name="url" value="jdbc:mysql://localhost:3306/springdb"/>
+        <property name="username" value="root"/>
+        <property name="password" value="991209"/>
+    </bean>
+
+
+<!--    声明SqlSessionFactory, 在这个类的内部创建SqlSessionFactory-->
+    <bean id="factory" class="org.mybatis.spring.SqlSessionFactoryBean">
+<!--        指定数据源-->
+        <property name="dataSource" ref="myDataSource"/>
+<!--        指定mybatis主配置文件
+            Resource可以直接使用value属性赋值
+-->
+        <property name="configLocation" value="classpath:mybatis.xml"/>
+
+    </bean>
+
+<!--    声明MapperScannerConfiguration-->
+
+</beans>

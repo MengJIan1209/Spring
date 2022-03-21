@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Spring.iml" filepath="$PROJECT_DIR$/Spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring_01_First/Spring_01_First.iml" filepath="$PROJECT_DIR$/Spring_01_First/Spring_01_First.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring_02_anno/Spring_02_anno.iml" filepath="$PROJECT_DIR$/Spring_02_anno/Spring_02_anno.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring_03_aspectj/Spring_03_aspectj.iml" filepath="$PROJECT_DIR$/Spring_03_aspectj/Spring_03_aspectj.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring_04_MyBatis/Spring_04_MyBatis.iml" filepath="$PROJECT_DIR$/Spring_04_MyBatis/Spring_04_MyBatis.iml" />
+    </modules>
+  </component>
+</project>

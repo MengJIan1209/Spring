@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    声明对象
+        id:自定义对象名称：唯一值
+        class：类的全限定名称，spring通过反射机制创建对象。不能是借口
+
+        spring根据id,class创建对象，吧对象放入到spring的一个map对象
+        map.put(id，对象)
+-->
+<!--    <bean id="someService" class="com.meng.spring.service.impl.SomeServiceImpl"/>-->
+<!--    <bean id="someService1" class="com.meng.spring.service.impl.SomeServiceImpl"/>-->
+
+<!--  创建非自定义对象  -->
+    <bean id="myDate" class="java.util.Date"/>
+
+<!--
+    构造注入： spring调用类的有参构造方法，创建对象同时给属性赋值
+    语法：
+            <bean id = "xxx",class = "xxx">
+                <constructor-arg> :表示一个构造方法的形参
+                标签有属性：name：构造方法形参名
+                           index：构造方法的参数位置
+                           value：简单类型的形参值
+                           ref：引用类型的形参值
+            </bean>
+
+
+-->
+<!-- 构造注入:使用name属性   -->
+    <bean id="student" class="com.meng.spring.ba03.Student">
+        <constructor-arg name="myname" value="李四"/>
+        <constructor-arg name="myage" value="23"/>
+        <constructor-arg name="myschool" ref="myschool"/>
+    </bean>
+
+<!--声明School类-->
+    <bean id="myschool" class="com.meng.spring.ba03.School">
+        <property name="name" value="北京大学"/>
+        <property name="address" value="北京市海淀区"/>
+    </bean>
+
+<!--声明File对象    -->
+    <bean id="file" class="java.io.File">
+        <constructor-arg name="parent" value="D:\\Desktop"/>
+        <constructor-arg name="child" value="vm密钥.txt"/>
+    </bean>
+
+</beans>

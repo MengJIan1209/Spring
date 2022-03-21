@@ -1,0 +1,5 @@
+# Project exclude paths
+/Spring_01_First/target/
+/Spring_02_anno/target/
+/Spring_03_aspectj/target/
+/Spring_04_MyBatis/target/
